@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+
+}
+
+.header .logo {
+    max-height:   60px;
+    background-color: aqua;
+}
+
+.header .leave {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.header .icon {
+   
+    padding-bottom: 8px;
+}

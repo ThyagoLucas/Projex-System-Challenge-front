@@ -1,0 +1,15 @@
+p{
+    font-size: 15px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 0;
+
+}
+
+.footer p{
+
+}
