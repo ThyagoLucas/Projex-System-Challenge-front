@@ -1,0 +1,11 @@
+.sidenav{
+    background-color: aquamarine;
+
+    width: 200px;
+    font-size: 15px;
+}
+
+.content{
+    padding: 10px;
+    background-color: #fff;
+}
