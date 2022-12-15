@@ -12,6 +12,7 @@ import { FooterComponent } from './components/template/footer/footer.component'
   declarations: [
     AppComponent,
     HeaderComponent,
+    HeaderComponent,
     FooterComponent,
     
   ],

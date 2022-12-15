@@ -5,11 +5,9 @@ p{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
+    position: fixed;
     bottom: 0;
-
-}
-
-.footer p{
-
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(109, 107, 107);
 }
