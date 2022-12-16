@@ -16,6 +16,7 @@ import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { DashboardsComponent } from './views/dashboards/dashboards.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DashboardsComponent } from './views/dashboards/dashboards.component';
     HomeComponent,
     EditMyDatasComponent,
     DashboardsComponent,
+    LoginComponent,
     
   ],
   imports: [
