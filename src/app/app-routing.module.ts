@@ -6,23 +6,14 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { PropertyComponent } from './views/property/property.component';
 
-const routes: Routes = [{
-  path:"login",
-  component: LoginComponent
-},
-  {
-  path:"home",
-  component: HomeComponent
-},{
-  path:"editar-imoveis",
-  component: PropertyComponent
-},{
-  path:"dashboard",
-  component: DashboardsComponent
-},{
-  path:"editar-dados",
-  component: EditMyDatasComponent
-},
+const routes: Routes = [
+
+  {path:'', component:}
+  {path:"login", component: LoginComponent},
+  {path:"home", component: HomeComponent},
+  {path:"editar-imoveis", component: PropertyComponent},
+  {path:"dashboard", component: DashboardsComponent },
+  {path:"editar-dados", component: EditMyDatasComponent},
 ];
 
 @NgModule({

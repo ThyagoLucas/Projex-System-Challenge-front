@@ -1,3 +1,4 @@
+import { Interceptor } from './auth/account.interceptor.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
@@ -17,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { LoginComponent } from './views/login/login.component';
+import { CreateAccountComponent } from './auth/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { LoginComponent } from './views/login/login.component';
     EditMyDatasComponent,
     DashboardsComponent,
     LoginComponent,
+    CreateAccountComponent,
     
   ],
   imports: [
@@ -39,7 +43,8 @@ import { LoginComponent } from './views/login/login.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-
+    MatSnackBarModule,
+    Interceptor
     
   ],
   providers: [],
