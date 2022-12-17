@@ -1,5 +1,5 @@
 import { Interceptor } from './auth/account.interceptor.module';
-import { NgModule } from '@angular/core';
+import { createComponent, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,14 +12,17 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { DashboardsComponent } from './views/dashboards/dashboards.component';
-import { LoginComponent } from './views/login/login.component';
 import { CreateAccountComponent } from './auth/create-account/create-account.component';
+import { UnauthComponent } from './views/unauth/unauth.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +34,10 @@ import { CreateAccountComponent } from './auth/create-account/create-account.com
     HomeComponent,
     EditMyDatasComponent,
     DashboardsComponent,
-    LoginComponent,
     CreateAccountComponent,
+    UnauthComponent,
+    CreateAccountComponent,
+    LoginComponent
     
   ],
   imports: [
@@ -44,7 +49,9 @@ import { CreateAccountComponent } from './auth/create-account/create-account.com
     MatListModule,
     MatCardModule,
     MatSnackBarModule,
-    Interceptor
+    Interceptor,
+    FormsModule,
+    MatFormFieldModule
     
   ],
   providers: [],
