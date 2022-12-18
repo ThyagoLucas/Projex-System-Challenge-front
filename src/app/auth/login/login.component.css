@@ -1,0 +1,51 @@
+.loginDivMain{
+    display: flex;
+    background-color: red;
+    height: 100vh;
+}
+
+.rigthDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 50%;
+    
+    
+}
+
+.formContainner{
+    padding: 20px;
+    margin: 45% 20%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.leftDiv{
+    display: flex;
+    width: 50%;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spanToCreate{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+       
+}
+.pToCreate{
+    margin-left: 5px;
+    color: blue;
+    font-style: italic;
+    
+}

@@ -1,35 +1,49 @@
+<div class="loginDivMain">
 
-    <mat-card>
-    <mat-card-title>Login StoreStock </mat-card-title>
+   <div class="leftDiv">
+    <p>left</p>
+   </div> 
 
+   <div class="rigthDiv">
 
-    <form>
-        <mat-form-field  >
+        <div class="formContainner">
+            
+            <form class="loginForm">
+                <mat-card-header>Login</mat-card-header>
+                <mat-form-field  >  
+                    <mat-label >e-mail</mat-label>
+
+                    <input matInput 
+                        [(ngModel)]="userLogin.email" 
+                        name="email" 
+                        placeholder="exemplo@exemplo.com"  
+                        [email]="true"
+                        [required]="true"> 
                 
-            <mat-label >Enter your email</mat-label>
-
-            <input matInput [formTarget] name="email" placeholder="exemplo@exemplo.com"  type="email" [required]="true"> 
-        
-            </mat-form-field>
-            
-            <mat-form-field>
-                <mat-label>Senha</mat-label>
-                <input matInput 
-                    [(ngModel)]="userLogin.password" 
-                    name="password" 
-                    [required]="true" 
-                    [minlength]="6" 
-                    type="password"/>
-            </mat-form-field>
-
-            
-
-    </form>
+                </mat-form-field>
+                    
+                <mat-form-field>
+                    <mat-label>Senha</mat-label>
+                    <input matInput 
+                        [(ngModel)]="userLogin.password" 
+                        name="password" 
+                        [required]="true" 
+                        [minlength]="6" 
+                        type="password"/>
+                </mat-form-field>
+            </form>
 
             <button mat-raised-button (click)="login()">login</button>
-            <span (click)="toCreate()">cadastrar</span>
-    
+            
+            <span class="spanToCreate" (click)="toCreate()">Não tem cadastro?<p class="pToCreate">cadastre-se!</p></span>
+
+        </div>
+    </div>
+   
+</div>
+   
+
+       
     
 
-    </mat-card>
 

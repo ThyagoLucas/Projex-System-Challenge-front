@@ -1,1 +1,42 @@
-<p>create-account works!</p>
+<div class="registerDivMain">
+
+    <div class="rigthDiv">
+        <p>left</p>
+
+
+    </div>
+
+    <div class="leftDiv">
+
+        <div class="formContainner">
+            <form class="registerForm">
+                <mat-card-title>Cadastro</mat-card-title>
+                <mat-form-field class="fildInput">
+                    <mat-label>Digite seu nome</mat-label>
+                    <input matInput placeholder="Ex: Fulano da silva" [required]="true" >
+                </mat-form-field>
+
+                <mat-form-field class="fildInput">
+                    <mat-label>Digite seu email</mat-label>
+                    <input matInput placeholder="Ex: fulano@exemplo.com" [required]="true" type="email" >
+                </mat-form-field>
+
+                <mat-form-field class="fildInput">
+                    <mat-label>Escolha uma senha</mat-label>
+                    <input matInput placeholder="min. 1 caracter" [required]="true" [minLength]="5" type="password">
+                </mat-form-field>
+
+            </form>
+            
+            <button mat-raised-button >Cadastrar</button>
+
+            <span class="spanToLogin" (click)="toLogin()">Já tem cadastro?<p class="toLogin">Login</p></span>
+
+        </div>
+        
+        
+        
+
+    </div>
+    
+</div>

@@ -1,0 +1,55 @@
+.registerDivMain{
+  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.rigthDiv{
+    background-color: aquamarine;
+    width: 50%;
+}
+
+.leftDiv{
+   
+    width: 50%;
+}
+
+.registerForm .fildInput{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.formContainner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20%;
+ 
+}
+
+.spanToLogin{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.toLogin{
+    margin-left: 5px;
+    color: blue;
+    font-style: italic
+}
