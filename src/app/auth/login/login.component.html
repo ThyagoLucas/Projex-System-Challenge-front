@@ -28,12 +28,12 @@
                         [(ngModel)]="userLogin.password" 
                         name="password" 
                         [required]="true" 
-                        [minlength]="6" 
+                        [minlength]="2" 
                         type="password"/>
                 </mat-form-field>
             </form>
 
-            <button mat-raised-button (click)="login()">login</button>
+            <button mat-raised-button (click)="tryLogin()">login</button>
             
             <span class="spanToCreate" (click)="toCreate()">Não tem cadastro?<p class="pToCreate">cadastre-se!</p></span>
 

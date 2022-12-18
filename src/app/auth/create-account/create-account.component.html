@@ -9,34 +9,56 @@
     <div class="leftDiv">
 
         <div class="formContainner">
-            <form class="registerForm">
+            <form class="registerForm" (ngSubmit)="tryCreateUser()" [formGroup]="createUserForm" #formDir="ngForm">
                 <mat-card-title>Cadastro</mat-card-title>
                 <mat-form-field class="fildInput">
                     <mat-label>Digite seu nome</mat-label>
-                    <input matInput placeholder="Ex: Fulano da silva" [required]="true" >
+                    <input matInput 
+                        [(ngModel)]="userCreate.name" 
+                        name="name"
+                        placeholder="Ex: Fulano da silva" 
+                        [required]="true" 
+                        type="text"
+                        [minLength]="5"
+                        formControlName="name"
+                        >
                 </mat-form-field>
 
                 <mat-form-field class="fildInput">
                     <mat-label>Digite seu email</mat-label>
-                    <input matInput placeholder="Ex: fulano@exemplo.com" [required]="true" type="email" >
+                    <input matInput 
+                        [(ngModel)]="userCreate.email" 
+                        name="email" 
+                        placeholder="exemplo@exemplo.com"  
+                        [email]="true"
+                        [required]="true"
+                        formControlName="email"
+                        
+                        > 
+                        
                 </mat-form-field>
 
                 <mat-form-field class="fildInput">
                     <mat-label>Escolha uma senha</mat-label>
-                    <input matInput placeholder="min. 1 caracter" [required]="true" [minLength]="5" type="password">
+                    <input matInput 
+                        [(ngModel)]="userCreate.password" 
+                        name="password"
+                        placeholder="min. 2 caracter" 
+                        [required]="true" 
+                        [minLength]="2" 
+                        type="password"
+                        formControlName="password">
                 </mat-form-field>
+                
+            <button mat-raised-button>Cadastrar</button>
 
             </form>
             
-            <button mat-raised-button >Cadastrar</button>
 
             <span class="spanToLogin" (click)="toLogin()">Já tem cadastro?<p class="toLogin">Login</p></span>
 
         </div>
-        
-        
-        
-
+   
     </div>
     
 </div>

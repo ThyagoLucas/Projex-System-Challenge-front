@@ -16,13 +16,13 @@ export class LoginComponent {
   token:Token;
 
   constructor(private authServ: AuthService, private msg: NotificationService, private router: Router){ 
-    this.userLogin ={
-      email:'', password:null||''
+    this.userLogin = {
+      email:'', password:''
     }
     this.token = {token:''}
   }
 
-  login(){
+  tryLogin(){
     
 
     this.authServ.tryLogin(this.userLogin).subscribe(token => this.token = token);

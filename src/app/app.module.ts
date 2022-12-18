@@ -25,7 +25,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 
 //material forms
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 
@@ -57,6 +57,7 @@ import {MatInputModule} from '@angular/material/input';
     MatSnackBarModule,
     Interceptor,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     HttpClientModule,
     MatInputModule,
