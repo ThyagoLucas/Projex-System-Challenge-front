@@ -12,8 +12,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {FormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
@@ -23,6 +22,13 @@ import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { CreateAccountComponent } from './auth/create-account/create-account.component';
 import { UnauthComponent } from './views/unauth/unauth.component';
 import { LoginComponent } from './auth/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
+//material forms
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -51,10 +57,14 @@ import { LoginComponent } from './auth/login/login.component';
     MatSnackBarModule,
     Interceptor,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    MatInputModule,
     
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,8 @@ import { NotificationService } from '../components/template/notification.service
 import { Token, UserLogin } from './shared/account.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,20 +12,18 @@ import { environment } from 'src/environment/environment';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private showMessage: NotificationService) { }
+  token:Token;
 
-  async tryLogin(user:UserLogin){
+  constructor(private http: HttpClient, private showMessage: NotificationService, private router:Router) {
+    this.token = {token:''}
+   }
 
-    const token = await this.http.post<Token>(environment.endPoint+'/login', user).toPromise()
-    console.log(token);
+  tryLogin(user:UserLogin): Observable<Token>{
 
-    if(token && token.token){
-      window.localStorage.setItem('token', token.token);
-      return true
-    }
-
-    return false;
+    return this.http.post<Token>(environment.endPoint+'/login', user);
 
   }
+
+ 
  
 }

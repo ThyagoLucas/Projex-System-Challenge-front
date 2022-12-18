@@ -1,6 +1,35 @@
-<div>
+
     <mat-card>
     <mat-card-title>Login StoreStock </mat-card-title>
+
+
+    <form>
+        <mat-form-field  >
+                
+            <mat-label >Enter your email</mat-label>
+
+            <input matInput [formTarget] name="email" placeholder="exemplo@exemplo.com"  type="email" [required]="true"> 
+        
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input matInput 
+                    [(ngModel)]="userLogin.password" 
+                    name="password" 
+                    [required]="true" 
+                    [minlength]="6" 
+                    type="password"/>
+            </mat-form-field>
+
+            
+
+    </form>
+
+            <button mat-raised-button (click)="login()">login</button>
+            <span (click)="toCreate()">cadastrar</span>
     
+    
+
     </mat-card>
-</div>
+

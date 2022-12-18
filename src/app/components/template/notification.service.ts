@@ -6,7 +6,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class NotificationService {
 
-  constructor(private snackbar : MatSnackBar){ }
+  constructor(public snackbar : MatSnackBar){ 
+   
+  }
 
     
   showMessage(msg:string):void{
