@@ -12,11 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  token:Token;
-
-  constructor(private http: HttpClient, private showMessage: NotificationService, private router:Router) {
-    this.token = {token:''}
-   }
+  constructor(private http: HttpClient, private showMessage: NotificationService, private router:Router) {}
 
   tryLogin(user:UserLogin): Observable<Token>{
     return this.http.post<Token>(environment.endPoint+'/login', user);
