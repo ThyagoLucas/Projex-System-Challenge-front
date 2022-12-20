@@ -1,8 +1,6 @@
 import { HttpInterceptor, HTTP_INTERCEPTORS, HttpRequest, HttpHandler, HttpEvent } from "@angular/common/http";
 import { Injectable, NgModule } from "@angular/core";
 import { Observable } from "rxjs";
-
-
 @Injectable()
 
 export class HttpRequestInterceptor implements HttpInterceptor{
@@ -15,8 +13,7 @@ export class HttpRequestInterceptor implements HttpInterceptor{
             headers: req.headers.set('authorization', token? 'Bearer ' + token : ''),
         });
 
-        return next.handle(dupReq)
-        
+        return next.handle(dupReq);
     }
 }
 

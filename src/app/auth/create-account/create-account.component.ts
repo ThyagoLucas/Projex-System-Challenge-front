@@ -19,8 +19,6 @@ export class CreateAccountComponent implements OnInit {
     this.userCreate = {name:'', email:'', password:''}}
 
   tryCreateUser():void{
-
-   
     this.authServ.tryCreateUser(this.userCreate).subscribe(
       (res) =>{
         console.log(res)
@@ -30,8 +28,6 @@ export class CreateAccountComponent implements OnInit {
       this.msg.showMessage('falha, tente novamente')
     });
 
-    
-   
   }
 
   toLogin():void{
@@ -45,10 +41,5 @@ export class CreateAccountComponent implements OnInit {
       password: new FormControl('', [Validators.required])
     });
   }
-
-
-
-
-
 
 }
