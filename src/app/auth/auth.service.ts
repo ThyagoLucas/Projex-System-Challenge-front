@@ -15,7 +15,7 @@ export class AuthService {
   constructor(private http: HttpClient, private showMessage: NotificationService, private router:Router) {}
 
   tryLogin(user:UserLogin): Observable<Token>{
-    return this.http.post<Token>('ec2-54-159-134-30.compute-1.amazonaws.com/login', user);
+    return this.http.post<Token>(environment.endPoint+'/login', user);
   }
 
   tryCreateUser(userCreate:UserCreate): Observable<any>{
