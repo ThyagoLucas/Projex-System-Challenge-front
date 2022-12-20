@@ -28,8 +28,11 @@ export class LoginComponent {
    tryLogin(){
 
     try {
-      this.authServ.tryLogin(this.userLogin).subscribe(value => { this.token.token = value.token});
+      this.authServ.tryLogin(this.userLogin).subscribe(
+        (value) => this.token.token = value.token, 
+        (error) => this.msg.showMessage(error.error))
 
+     
       if(this.token.token){
         this.msg.showMessage('login efetuado com sucesso');
         window.localStorage.setItem('token', this.token.token);
