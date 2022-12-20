@@ -20,9 +20,8 @@ export class CreateAccountComponent implements OnInit {
 
   tryCreateUser():void{
 
-    console.log('entrou')
-
-    const response = this.authServ.tryCreateUser(this.userCreate).subscribe(
+   
+    this.authServ.tryCreateUser(this.userCreate).subscribe(
       (res) =>{
         console.log(res)
         this.msg.showMessage('cadastrado com sucesso!')
@@ -48,26 +47,6 @@ export class CreateAccountComponent implements OnInit {
   }
 
 
-  //analisar depois
-  get name(){
-    return this.createUserForm.get('name')!;
-  }
-
-  get email(){
-    return this.createUserForm.get('email')!;
-  }
-
-  get password(){
-    return this.createUserForm.get('password')!;
-  }
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-  
 
 
 

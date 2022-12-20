@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AuthService } from './../../auth/auth.service';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,10 +7,9 @@ import { Router } from '@angular/router';
   templateUrl: './unauth.component.html',
   styleUrls: ['./unauth.component.css']
 })
-export class UnauthComponent {
+export class UnauthComponent implements OnInit {
 
-  constructor(private router: Router){ }
-
+  constructor(private router: Router, private readonly authSer : AuthService){ }
 
   login():void{
     this.router.navigate(['/login']);
@@ -18,7 +18,12 @@ export class UnauthComponent {
   register():void{
     this.router.navigate(['/cadastro']);
   }
-
-
+  
+  ngOnInit(){
+    
+    const token = this.authSer.getToken();
+ 
+    if(token) this.router.navigate(['home'])
+  }
 
 }

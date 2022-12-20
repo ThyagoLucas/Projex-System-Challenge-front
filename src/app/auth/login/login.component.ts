@@ -27,24 +27,22 @@ export class LoginComponent {
 
    tryLogin(){
 
-    try {
-      this.authServ.tryLogin(this.userLogin).subscribe(
-        (value) => this.token.token = value.token, 
-        (error) => this.msg.showMessage(error.error))
+  
+      
 
      
       if(this.token.token){
         this.msg.showMessage('login efetuado com sucesso');
         window.localStorage.setItem('token', this.token.token);
         this.router.navigate(['home']);
+      }else{
+        this.authServ.tryLogin(this.userLogin).subscribe(
+        (value) => this.token.token = value.token, 
+        (error) => this.msg.showMessage(error.error))
       }
-    } catch (error) {
-      
-      console.log(this.token)
-      this.msg.showMessage('dados invalidos, tente novamente!');
     } 
-    
-  }
+      
+      
 
   toCreate():void{
     this.router.navigate(['cadastro'])

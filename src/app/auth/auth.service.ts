@@ -21,5 +21,11 @@ export class AuthService {
   tryCreateUser(userCreate:UserCreate): Observable<any>{
     return this.http.post<any>(environment.endPoint+'/register', userCreate);
   }
+  getToken():string |boolean {
+    const token = window.localStorage.getItem('token');
+
+    return token? token : false;
+  }
+
 
 }

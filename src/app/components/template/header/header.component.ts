@@ -12,8 +12,9 @@ export class HeaderComponent {
 
 
   leave():void{
+    console.log('saindo')
     window.localStorage.clear();
-    this.router.navigate([])
+    this.router.navigate([''])
   }
 
 }
