@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NotificationService } from '../components/template/notification.service';
-import { Token, UserLogin, UserCreate } from './shared/account.model';
+import { Token, UserLogin, UserCreate, UserCreated } from './shared/account.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
 import { Router } from '@angular/router';
@@ -18,8 +18,9 @@ export class AuthService {
     return this.http.post<Token>(environment.endPoint+'/login', user);
   }
 
-  tryCreateUser(userCreate:UserCreate): Observable<any>{
-    return this.http.post<any>(environment.endPoint+'/register', userCreate);
+  tryCreateUser(userCreate:UserCreate):Observable<UserCreated>{
+    return this.http.post<UserCreated>(environment.endPoint+'/register', userCreate);
+
   }
   getToken():string |boolean {
     const token = window.localStorage.getItem('token');

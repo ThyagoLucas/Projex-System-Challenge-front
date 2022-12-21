@@ -16,17 +16,17 @@ export class CreateAccountComponent implements OnInit {
   createUserForm!: FormGroup;
   
   constructor(private authServ: AuthService, private msg: NotificationService, private router:Router){
-    this.userCreate = {name:'', email:'', password:''}}
+    this.userCreate = {name:'', email:'', password:''}
+  }
+
 
   tryCreateUser():void{
-    this.authServ.tryCreateUser(this.userCreate).subscribe(
-      (res) =>{
-        console.log(res)
-        this.msg.showMessage('cadastrado com sucesso!')
+    this.authServ.tryCreateUser(this.userCreate).subscribe(res =>{
+      if(res.msg === 'created'){
+        console.log('resposta',res)
+        this.msg.showMessage('cadastrado com sucesso!');
         this.router.navigate(['login'])
-    }, (erro) =>{
-      this.msg.showMessage('falha, tente novamente')
-    });
+      }}, error => this.msg.showMessage(error.error))
 
   }
 
@@ -34,7 +34,8 @@ export class CreateAccountComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
-  ngOnInit(): void {
+  //não consegui implementar
+  ngOnInit(): void { 
     this.createUserForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
