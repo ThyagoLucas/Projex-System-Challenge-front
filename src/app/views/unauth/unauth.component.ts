@@ -23,7 +23,7 @@ export class UnauthComponent implements OnInit {
     
     const token = this.authSer.getToken();
  
-    if(token) this.router.navigate(['home'])
+    if(token) this.router.navigate([''])
   }
 
 }

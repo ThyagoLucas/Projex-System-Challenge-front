@@ -1,26 +1,36 @@
-import { CreateAccountComponent } from './auth/create-account/create-account.component';
-import { UnauthComponent } from './views/unauth/unauth.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+import { CreateAccountComponent } from './auth/create-account/create-account.component';
+import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/shared/auth.guard';
+import { LoggedHomeComponent } from './components/template/logged-home/logged-home.component';
 import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { HomeComponent } from './views/home/home.component';
-import { PropertyComponent } from './views/property/property.component';
-import { LoginComponent } from './auth/login/login.component';
+import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
+import { CreatePropertyComponent } from './views/property/create-property/create-property.component';
+import { HomePropertyComponent } from './views/property/home-property/home-property.component';
+import { UnauthComponent } from './views/unauth/unauth.component';
 
 const routes: Routes = [
-  {path:'home', component: HomeComponent, children:[ 
-    {path:"editar-imoveis", component: PropertyComponent},
-    {path:"dashboard", component: DashboardsComponent },
-    {path:"editar-dados", component: EditMyDatasComponent}], 
+  {path:'', component:LoggedHomeComponent, children:[ 
+    {path:'home',component: HomeComponent },
+    {path:'imoveis', component: HomePropertyComponent},
+    {path:'criar-imovel', component: CreatePropertyComponent},
+    {path:'editar-dados', component: EditMyDatasComponent },
+    {path:'dashboard', component: DashboardsComponent}
+    
+    ], canActivate:[AuthGuard]},
 
-    canActivate:[AuthGuard]},
-
-  {path:'', component:UnauthComponent},
+  {path:'unauth', component:UnauthComponent},
   {path:'login', component: LoginComponent},
-  {path:'cadastro', component: CreateAccountComponent}  
-];
+  {path:'cadastro', component: CreateAccountComponent},
+  {path:'**', component: NotFoundPageComponent},
+  
+
+  ];
+  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
