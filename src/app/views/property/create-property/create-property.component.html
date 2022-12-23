@@ -1,7 +1,107 @@
-<p>create-property works!</p>
-<a routerLink="adicionar-imovel">adicionar</a>
+<mat-card>
+    <mat-toolbar>informações do imóvel</mat-toolbar>
+    <form [formGroup]="form" >
 
-<a mat-list-item routerLink="/adicionar-imovel">
-    <i class="material-icons v-middle">home</i>
-    Inicio
-</a>
+        <div class="title-description">
+
+            <mat-form-field >
+                <input matInput placeholder="Título" formControlName="title" type="text">
+            </mat-form-field>
+
+            <mat-form-field >
+                <input matInput placeholder="Descrição" formControlName="description" type="text">
+            </mat-form-field>
+
+            
+            
+            <mat-form-field >
+                
+                <mat-select formControlName="propertyType" placeholder="Tipo de propriedade">
+                    <mat-option value="terreno">Terreno</mat-option>
+                    <mat-option value="casa" >Casa</mat-option>
+                    <mat-option value="apartamento">Apartamento</mat-option>
+                </mat-select>
+                
+            </mat-form-field>
+
+            <div class="bath-bed-rooms">
+
+                <mat-form-field class="bedroom">
+                    <select matNativeControl required formControlName="bedroomQuantity" placeholder="quartos">
+                        <option label="quartos" [defaultSelected]="true" disabled></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 +</option>
+                      </select>
+                </mat-form-field>
+
+                <mat-form-field class="bathroom">
+                    <select matNativeControl required formControlName="bathroomQuantity">
+                        <option label="banheiros" [defaultSelected]="true" disabled></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 +</option>
+                        </select>
+                
+                </mat-form-field>
+
+            </div>
+
+            <div class="price-profit-container">
+                <mat-form-field  class="price">
+                    <input matInput  placeholder="Preço" formControlName="price" type="number">
+                </mat-form-field>
+
+                <mat-form-field class="profit">
+                    <input matInput  placeholder="lucro ex: 15%" formControlName="profitPercent" type="number">
+                </mat-form-field>
+            </div>
+            
+            <div class="images-container">
+                <label class="label-images">
+                    <span>fotos do imóvel</span>
+                    <input #imageInput 
+                        class="input-images"
+                        type="file"
+                        id="image_uploads"
+                        name="image_uploads"
+                        accept="image/*"
+                        (change)="processFile(imageInput)"
+                        multiple />
+                        
+                        <mat-icon class="v-middle">upload</mat-icon>
+                </label>
+
+                <div class="preload-images" >
+                    <div class="image-preview" >
+                        <img *ngFor="let img of imgsUrl; index as i; first as isFisrt" src="{{img}}" width="50px" height="35px">
+                    </div>
+                </div>
+            </div>
+           
+                
+                
+             
+            
+            <mat-radio-group formControlName="contractType" color="primary">
+                <mat-radio-button value="rent"  >aluguel</mat-radio-button>
+                <mat-radio-button value="salle">venda</mat-radio-button>
+            </mat-radio-group>
+           
+        </div>
+
+        
+            
+      
+
+    </form> 
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Cadastrar</button>
+        <button mat-raised-button (click)="onCancel()">Cancelar</button>
+    </mat-card-actions>
+</mat-card>

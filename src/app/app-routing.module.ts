@@ -1,3 +1,4 @@
+import { EditPropertyComponent } from './views/property/edit-property/edit-property.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,15 +11,13 @@ import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.compon
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
 import { CreatePropertyComponent } from './views/property/create-property/create-property.component';
-import { HomePropertyComponent } from './views/property/home-property/home-property.component';
+import { PropertyComponent } from './views/property/property/property.component';
 import { UnauthComponent } from './views/unauth/unauth.component';
 
 const routes: Routes = [
   {path:'', component:LoggedHomeComponent, children:[ 
     {path:'home',component: HomeComponent },
-    {path:'imoveis', component: HomePropertyComponent},
-    {path:'criar-imovel', component: CreatePropertyComponent},
-    {path:'editar-dados', component: EditMyDatasComponent },
+    {path:'imoveis', loadChildren:()=> import('./views/property/property-routing.module').then((m)=>m.PropertyRoutingModule)},
     {path:'dashboard', component: DashboardsComponent}
     
     ], canActivate:[AuthGuard]},
@@ -28,7 +27,6 @@ const routes: Routes = [
   {path:'cadastro', component: CreateAccountComponent},
   {path:'**', component: NotFoundPageComponent},
   
-
   ];
   
 

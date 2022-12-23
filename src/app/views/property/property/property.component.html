@@ -1,0 +1,42 @@
+
+<mat-card class="properties">
+    <div>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title ng>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>tipo: {{type}}</p>
+        <p>localização: Av. djalma batista, 3000</p>
+        <p class="price">Valor: 1.159,00</p>
+      </mat-card-content>
+  
+      <mat-card-actions class="buttons">
+  
+        <button mat-button color="primary">Aluguei!</button>
+        <button mat-button>Editar imóvel</button>
+  
+  
+      </mat-card-actions>
+  
+    </div>
+  
+  </mat-card>
+  
+  <mat-card>
+  
+    <mat-card-title>vendas</mat-card-title>
+    <mat-card-content>
+      <mat-card class="imovel"> ola</mat-card>
+    </mat-card-content>
+  
+    <p>Valor: 1.159,00</p>
+  
+  </mat-card>
+  
+  
+  <button (click)="onAdd()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon >add</mat-icon>
+  </button>

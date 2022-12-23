@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "ngx-mask": "^15.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -27,6 +29,12 @@
     "@angular-devkit/build-angular": "^15.0.3",
     "@angular/cli": "~15.0.3",
     "@angular/compiler-cli": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "prettier-eslint": "^15.0.1",
     "typescript": "~4.8.2"
   }
 }

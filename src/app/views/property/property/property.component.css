@@ -1,0 +1,13 @@
+.imovel{
+    width: 150px;
+    height: 150px;
+}
+
+.buttons{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+}

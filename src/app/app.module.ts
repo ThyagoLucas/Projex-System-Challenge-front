@@ -1,8 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -24,13 +26,10 @@ import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
-import { CreatePropertyComponent } from './views/property/create-property/create-property.component';
-import { EditPropertyComponent } from './views/property/edit-property/edit-property.component';
-import { HomePropertyComponent } from './views/property/home-property/home-property.component';
+import { PropertyModule } from './views/property/property.module';
 import { UnauthComponent } from './views/unauth/unauth.component';
 
 
-//material forms
 
 @NgModule({
   declarations: [
@@ -47,10 +46,7 @@ import { UnauthComponent } from './views/unauth/unauth.component';
     CreateAccountComponent,
     LoginComponent,
     NotFoundPageComponent,
-    CreatePropertyComponent,
-    EditPropertyComponent,
-    HomePropertyComponent,
-    LoggedHomeComponent
+    LoggedHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +63,11 @@ import { UnauthComponent } from './views/unauth/unauth.component';
     MatFormFieldModule,
     HttpClientModule,
     MatInputModule,
- 
+    MatButtonModule,
+    MatIconModule,
+    PropertyModule
+
+    
     
   ],
   providers: [
