@@ -22,7 +22,6 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { LoggedHomeComponent } from './components/template/logged-home/logged-home.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
@@ -40,7 +39,7 @@ import { UnauthComponent } from './views/unauth/unauth.component';
     NavComponent,
     HomeComponent,
     EditMyDatasComponent,
-    DashboardsComponent,
+   
     CreateAccountComponent,
     UnauthComponent,
     CreateAccountComponent,

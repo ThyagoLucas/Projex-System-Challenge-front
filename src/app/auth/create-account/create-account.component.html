@@ -1,14 +1,9 @@
-<div class="registerDivMain">
 
-    <div class="rigthDiv">
-        <p>left</p>
-
-
-    </div>
 
     <div class="leftDiv">
 
         <div class="formContainner">
+
             <form class="registerForm" (ngSubmit)="tryCreateUser()" [formGroup]="createUserForm" #formDir="ngForm">
                 <mat-card-title>Cadastro</mat-card-title>
                 <mat-form-field class="fildInput">
@@ -52,13 +47,11 @@
                 
 
             </form>
-                <button mat-raised-button (click)="tryCreateUser()">Cadastrar</button>
 
-
+            <button mat-raised-button (click)="tryCreateUser()">Cadastrar</button>
             <span class="spanToLogin" (click)="toLogin()">Já tem cadastro?<p class="toLogin">Login</p></span>
 
         </div>
    
     </div>
     
-</div>

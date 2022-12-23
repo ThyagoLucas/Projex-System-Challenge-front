@@ -6,7 +6,6 @@ import { CreateAccountComponent } from './auth/create-account/create-account.com
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/shared/auth.guard';
 import { LoggedHomeComponent } from './components/template/logged-home/logged-home.component';
-import { DashboardsComponent } from './views/dashboards/dashboards.component';
 import { EditMyDatasComponent } from './views/edit-my-datas/edit-my-datas.component';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
@@ -18,13 +17,13 @@ const routes: Routes = [
   {path:'', component:LoggedHomeComponent, children:[ 
     {path:'home',component: HomeComponent },
     {path:'imoveis', loadChildren:()=> import('./views/property/property-routing.module').then((m)=>m.PropertyRoutingModule)},
-    {path:'dashboard', component: DashboardsComponent}
+    {path:'editar-dados', component: EditMyDatasComponent}
     
     ], canActivate:[AuthGuard]},
 
-  {path:'unauth', component:UnauthComponent},
-  {path:'login', component: LoginComponent},
-  {path:'cadastro', component: CreateAccountComponent},
+  {path:'unauth', loadChildren:()=> import('./views/unauth/unauth-routing.module').then((m)=>m.UnauthRoutingModule)},
+  {path:'login', loadChildren:()=> import('./auth/login/login-routing.module').then((m)=>m.LoginRoutingModule)},
+  {path:'cadastro', loadChildren:()=> import('./auth/create-account/create-account-routing.module').then((m)=>m.CreateAccountRoutingModule)},
   {path:'**', component: NotFoundPageComponent},
   
   ];

@@ -18,7 +18,7 @@ export class UnauthComponent implements OnInit {
   register():void{
     this.router.navigate(['/cadastro']);
   }
-  
+
   ngOnInit(){
     
     const token = this.authSer.getToken();

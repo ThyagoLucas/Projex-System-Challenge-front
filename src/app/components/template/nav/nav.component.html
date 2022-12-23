@@ -11,10 +11,7 @@
                 Imóveis
             </a>
             
-            <a mat-list-item routerLink="dashboard" >
-                <i class="material-icons v-middle" >dashboard</i>
-                Dashboards
-            </a>
+          
             <a mat-list-item routerLink="editar-dados">
                 <i class="material-icons v-middle">settings</i>
                 Editar dados
@@ -22,10 +19,12 @@
         
         </mat-nav-list>
     </mat-sidenav>
-
+   
     <mat-sidenav-content class="content">
-
-      <router-outlet></router-outlet>
+        <div class="teste">
+            <router-outlet></router-outlet>
+        </div>
+       
 
     </mat-sidenav-content>
 

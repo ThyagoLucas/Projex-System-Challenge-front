@@ -2,6 +2,11 @@
     width: 50%;
 }
 
+
+mat-card{
+    overflow-y: hidden;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -40,10 +45,10 @@ mat-toolbar{
     width: 85%;
 }
 .bathroom{
-    width: 50%;
+    width: 48%;
 }
 .bedroom{
-    width: 45%;
+    width: 48%;
 }
 
 .price-profit-container{
@@ -54,32 +59,66 @@ mat-toolbar{
     width: 85%;
 }
 .price{
-    width: 50%;
+    width: 48%;
 }
 .profit{
-    width: 45%;
+    width: 48%;
 }
-
 
 
 .images-container{
-    background-color: red;
+    
     width: 85%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+.image-container{
     
+    background-color: #020202;
+    width: 30%;
+    height: 100px;
+    margin: 0 3px 3px 0;
 }
 
 .label-images{
-    background-color: aqua;
-    padding: 10px;
+   
+    padding: 4px;
     border-radius: 5px;
+    border: 1px dashed black;
+    width: 30%;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .input-images{
     display: none;
-}
-.preload-images{
+    color: #9027B0;
 
-    margin-left: 5px;
+}
+
+
+.image{
+    border-radius: 1px;
+    margin-right: 5px;
+    width: 100%;
+    height: 100px;
+    background-color: #9027B0;
+}
+
+
+.add-image-span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.delete-image{
+    display: flex;
+    position: absolute;
+   
+    color: rgb(194, 34, 34);
 }

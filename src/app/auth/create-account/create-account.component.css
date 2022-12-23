@@ -1,19 +1,13 @@
-.registerDivMain{
-  
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    
-}
 
-.rigthDiv{
-    background-color: aquamarine;
-    width: 50%;
-}
 
 .leftDiv{
-   
-    width: 50%;
+   background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://www.teahub.io/photos/full/1-17056_dream-house-simple-with-pool.jpg') ;
 }
 
 .registerForm .fildInput{
@@ -37,8 +31,11 @@
     flex-direction: column;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 50px;
-    margin: 20%;
+    padding: 20px 0 20px 0;
+    width: 20%;
+
+    background-color: rgba(174, 183, 207, 0.658);
+    
  
 }
 

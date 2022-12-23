@@ -1,28 +1,25 @@
-.loginDivMain{
-    display: flex;
-    background-color: red;
-    height: 100vh;
-}
-
 .rigthDiv{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
     
-    
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.teahub.io/photos/full/1-17056_dream-house-simple-with-pool.jpg') ;
 }
-
 .formContainner{
-    padding: 20px;
-    margin: 45% 20%;
+    width: 30%;
+    padding: 20px 0 20px 0;
+    
     border: 1px solid black;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
+    justify-content: center; 
+    background-color: rgba(218, 248, 248, 0.623); 
+    
 }
 
 .leftDiv{
@@ -40,12 +37,10 @@
 .spanToCreate{
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
-       
+    margin-top: 10px;  
 }
 .pToCreate{
     margin-left: 5px;
     color: blue;
     font-style: italic;
-    
 }

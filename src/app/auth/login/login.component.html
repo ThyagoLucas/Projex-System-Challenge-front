@@ -1,46 +1,44 @@
-<div class="loginDivMain">
-
-   <div class="leftDiv">
-    <p>left</p>
-   </div> 
-
-   <div class="rigthDiv">
-
-        <div class="formContainner">
-            
-            <form class="loginForm">
-                <mat-card-header>Login</mat-card-header>
-                <mat-form-field  >  
-                    <mat-label >e-mail</mat-label>
-
-                    <input matInput 
-                        [(ngModel)]="userLogin.email" 
-                        name="email" 
-                        placeholder="exemplo@exemplo.com"  
-                        [email]="true"
-                        [required]="true"> 
-                
-                </mat-form-field>
-                    
-                <mat-form-field>
-                    <mat-label>Senha</mat-label>
-                    <input matInput 
-                        [(ngModel)]="userLogin.password" 
-                        name="password" 
-                        [required]="true" 
-                        [minlength]="2" 
-                        type="password"/>
-                </mat-form-field>
-            </form>
-
-            <button mat-raised-button (click)="tryLogin()">login</button>
-            
-            <span class="spanToCreate" (click)="toCreate()">Não tem cadastro?<p class="pToCreate">cadastre-se!</p></span>
-
-        </div>
-    </div>
    
+<div class="rigthDiv">
+    
+    <div class="formContainner">
+        
+        <form class="loginForm">
+            <mat-card-header>Login</mat-card-header>
+            <mat-form-field  >  
+                <mat-label >e-mail</mat-label>
+
+                <input matInput 
+                    [(ngModel)]="userLogin.email" 
+                    name="email" 
+                    placeholder="exemplo@exemplo.com"  
+                    [email]="true"
+                    [required]="true"> 
+            
+            </mat-form-field>
+                
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input matInput 
+                    [(ngModel)]="userLogin.password" 
+                    name="password" 
+                    [required]="true" 
+                    [minlength]="2" 
+                    type="password"/>
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button (click)="tryLogin()">login</button>
+        
+        <span class="spanToCreate" (click)="toCreate()">Não tem cadastro?<p class="pToCreate">cadastre-se!</p></span>
+
+    </div>
+
 </div>
+
+
+
+
    
 
        
